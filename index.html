@@ -96,8 +96,24 @@
             font-weight: bold;
             font-size: 24px;
         }
+        .container {
+  position: relative;
+  display: inline-block;
+}
 
-        /* Gift box interaction */
+.gift-img {
+  position: absolute;
+  top: 54%;          
+  left: 50%;   
+  width:10%;
+  z-index: 2;
+}
+
+.bottom-layer {
+  position: relative; 
+  z-index: 1; 
+}
+  /* Gift box interaction */
         #gift-img {
             cursor: pointer;
             transition: transform 0.3s;
@@ -145,9 +161,11 @@
 
         <div id="screen4" class="screen">
             <div class="text-content">Happy new year my kuchupuchu!!<br>click on the gift box</div>
-            <img id="gift-img" src="Assets/cat-gift.png" alt="Gift" onclick="openGift()">
+            <div class="container">
+            <img class="bottom-layer" src="Assets/cat-gift.png" alt="base">
+              	
+            <img class="gift-img" src="Assets/gift-box.png" alt="Gift" onclick="openGift()"> </div>
         </div>
-
         <div id="screen5" class="screen">
             <img src="Assets/cat-cool.png" alt="Funny Cat">
             <div class="text-content final-text">I will continue irritating you this year as well Ansu ❤️</div>
